@@ -14,6 +14,10 @@ wxEND_EVENT_TABLE()
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
 	: wxFrame(NULL, wxID_ANY, title, pos, size)
 {
+wxIcon		icon("IDI_ICON1");
+
+	this->SetIcon(icon);
+
 	wxMenu *menuFile = new wxMenu;
 
 	menuFile->Append(
