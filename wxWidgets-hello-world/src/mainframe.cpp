@@ -5,6 +5,11 @@
 
 #include "local.h"
 
+#if defined(__LINUX__)
+#define	DEFINE_APP_512_XPM
+#include "app_512.xpm"
+#endif
+
 wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
 	EVT_MENU(ID_Hello,	MyFrame::OnHello)
 	EVT_MENU(wxID_EXIT,	MyFrame::OnExit)
@@ -14,9 +19,7 @@ wxEND_EVENT_TABLE()
 MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size)
 	: wxFrame(NULL, wxID_ANY, title, pos, size)
 {
-wxIcon		icon("IDI_ICON1");
-
-	this->SetIcon(icon);
+	SetProgramIcon();
 
 	wxMenu *menuFile = new wxMenu;
 
@@ -39,6 +42,32 @@ wxIcon		icon("IDI_ICON1");
 	CreateStatusBar();
 	SetStatusText( "Welcome to wxWidgets!" );
 }
+
+#if defined(_WIN32)
+void MyFrame::SetProgramIcon()
+{
+	this->SetIcon(wxIcon("IDI_ICON1"));
+}
+#elif defined(__APPLE__)
+void MyFrame::SetProgramIcon()
+{
+	// Program icon is not handled here
+	// Look at CMakeLists.txt and macos/Info.plist
+}
+#elif defined(__LINUX__)
+void MyFrame::SetProgramIcon()
+{
+wxBitmap	bmp(app_512_xpm);
+wxIcon		icon;
+
+	icon.CopyFromBitmap(bmp);
+	this->SetIcon(icon);
+}
+#else
+void MyFrame::SetProgramIcon()
+{
+}
+#endif
 
 void MyFrame::OnExit(wxCommandEvent& event)
 {

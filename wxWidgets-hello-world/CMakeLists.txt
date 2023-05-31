@@ -11,7 +11,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(VCPKG_TARGET_ARCHITECTURE x64)
 
 # Put include files (*.h) here
-include_directories(h)
+if(WIN32)
+include_directories(h windows)
+else()
+include_directories(h linux)
+endif()
 
 # Add source files to this list
 set(SOURCES
@@ -35,7 +39,17 @@ find_package(wxWidgets CONFIG REQUIRED)
 if(WIN32)
 	add_executable(main WIN32 ${SOURCES} windows/app.rc)
 elseif(APPLE)
-	add_executable(main MACOSX_BUNDLE ${SOURCES})
+	set(MACOSX_BUNDLE_ICON_FILE app.icns)
+	set(app_ICON ${CMAKE_CURRENT_SOURCE_DIR}/macos/app.icns)
+	set_source_files_properties(${app_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
+
+	add_executable(
+		main
+		MACOSX_BUNDLE 
+		${app_ICON}
+		${SOURCES}
+	)
+
 	set_target_properties(main PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/macos/Info.plist)
 else()
 	add_executable(main ${SOURCES})

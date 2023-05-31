@@ -3,5 +3,5 @@ Version: 0.90.0
 Maintainer: John Hanley
 Depends:
 Architecture: amd64
-Homepage: https://github.com/jhanley-com/jhanley-cpp
+Homepage: https://github.com/jhanley-com/jhanley-wxWidgets
 Description: wxWidgets hello world example program

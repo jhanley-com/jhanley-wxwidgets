@@ -32,6 +32,8 @@ private:
 	void OnExit(wxCommandEvent& event);
 	void OnAbout(wxCommandEvent& event);
 
+	void SetProgramIcon();
+
 	//************************************************************
 	// This class handles events
 	//************************************************************

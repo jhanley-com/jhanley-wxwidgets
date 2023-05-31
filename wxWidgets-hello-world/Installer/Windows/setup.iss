@@ -4,8 +4,7 @@
 #define MyAppName "wxWidgets Hello World Example"
 #define MyAppVersion "0.90.0"
 #define MyAppPublisher "John Hanley"
-; #define MyAppURL "https://www.jhanley.com"
-#define MyAppURL "https://github.com/jhanley-com/jhanley-cpp"
+#define MyAppURL "https://github.com/jhanley-com/jhanley-wxWidgets"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
