@@ -1,3 +1,5 @@
+![Screenshot](screenshot.png)
+
 # Enhanced base wxWidgets project configured for vcpkg and cmake
 
 ## Release Date
@@ -22,6 +24,7 @@ This version adds the following features to the base wxWindows project:
    - right-click menus
  - status bar with four sections
  - clock demonstating timer events. Writes current time to status bar
+ - translation of string via gettext (Poedit).
 
 Example installers are provided for Windows and Debian systems.
 

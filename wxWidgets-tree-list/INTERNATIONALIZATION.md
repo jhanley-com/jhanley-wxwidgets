@@ -20,7 +20,7 @@ The translated *.mo files are called Catalogs. Review the [wxLocale](https://doc
 // -- Catalogs/es_ES/app.mo	(Spanish translation)
 // -- Catalogs/ja_JP/app.mo	(Japanese translation)
 //
-// m_locale = wxLocale(wxLANGUAGE_JAPANESE);
+// m_locale = new wxLocale(wxLANGUAGE_JAPANESE);
 // wxString catalogs = "/path/to/Catalogs";	// Directory path
 // m_locale->AddCatalogPrefixPath(catalogs);
 // m_locale->AddCatalog(wxNT("app"));		// Loads Catalogs/ja_JP/app.mo

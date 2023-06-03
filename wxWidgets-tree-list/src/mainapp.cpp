@@ -30,7 +30,7 @@ bool MyApp::OnInit()
 	SetVendorName(author);
 	SetAppName(appTitle);
 
-	m_locale = wxLocale(wxLANGUAGE_DEFAULT);
+	m_locale = new wxLocale(wxLANGUAGE_DEFAULT);
 
 	// This is for future internationalization
 	// Catalogs is the path to where the translation app.mo files are located.
