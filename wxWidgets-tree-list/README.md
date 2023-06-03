@@ -1,7 +1,7 @@
-# Base wxWidgets project configured for vcpkg and cmake
+# Enhanced base wxWidgets project configured for vcpkg and cmake
 
 ## Release Date
-May 29, 2023
+June 3, 2023
 
 ---
 ## Program License
@@ -11,7 +11,17 @@ MIT Licensed. Refer to [copyright.txt](copyright.txt) and [LICENSE](LICENSE) for
 ---
 ## Repository Description
 
-This is a base [wxWidgets](https://www.wxwidgets.org/) project setup for vcpkg and cmake. Windows, macOS and Ubuntu are supported.
+This is a enhanced base [wxWidgets](https://www.wxwidgets.org/) project setup for vcpkg and cmake. Windows, macOS and Ubuntu are supported.
+
+This version adds the following features to the base wxWindows project:
+ - toolbar
+ - main window with a movable splitter
+ - tree control in splitter left window
+   - right-click menus
+ - list control in splitter right window
+   - right-click menus
+ - status bar with four sections
+ - clock demonstating timer events. Writes current time to status bar
 
 Example installers are provided for Windows and Debian systems.
 
@@ -107,28 +117,28 @@ This repository supports multiplatform builds using Visual Studio Code.
 ---
 ## Build Windows
  - Configure cmake:
-   - `tools-windows\configure_cmake.bat`
+   - `tools\windows\configure_cmake.bat`
  - DEBUG version:
    - Build program
-     - `tools-windows\build_debug.bat`
+     - `tools\windows\build_debug.bat`
    - Run program
-     - `tools-windows\run_debug.bat`
+     - `tools\windows\run_debug.bat`
  - RELEASE version:
    - Run program
-     - `tools-windows\run_release.bat`
+     - `tools\windows\run_release.bat`
    - Build program
-     - `tools-windows\build_release.bat`
+     - `tools\windows\build_release.bat`
 
 ---
 ## Build Ubunutu
- - `chmod +x tools-debian/*.sh`
+ - `chmod +x tools/debian/*.sh`
  - DEBUG version:
    - Configure cmake:
-     - `tools-debian/configure_cmake_debug.sh`
+     - `tools/debian/configure_cmake_debug.sh`
    - Build program
-     - `tools-debian/build_debug.sh`
+     - `tools/debian/build_debug.sh`
    - Run program (debug version):
-     - `tools-debian/run_debug.sh`
+     - `tools/debian/run_debug.sh`
  - RELEASE version:
    - Configure cmake:
      - `tools-debian/configure_cmake_release.sh`
@@ -139,21 +149,21 @@ This repository supports multiplatform builds using Visual Studio Code.
 
 ---
 ## Build macOS
- - `chmod +x tools-macos/*.sh`
+ - `chmod +x tools/macos/*.sh`
  - DEBUG version:
    - Configure cmake:
-     - `tools-macos/configure_cmake_debug.sh`
+     - `tools/macos/configure_cmake_debug.sh`
    - Build program
-     - `tools-macos/build_debug.sh`
+     - `tools/macos/build_debug.sh`
    - Run program (debug version):
-     - `tools-macos/run_debug.sh`
+     - `tools/macos/run_debug.sh`
  - RELEASE version:
    - Configure cmake:
-     - `tools-macos/configure_cmake_release.sh`
+     - `tools/macos/configure_cmake_release.sh`
    - Build program
-     - `tools-macos/build_release.sh`
+     - `tools/macos/build_release.sh`
    - Run program
-     - `tools-macos/run_release.sh`
+     - `tools/macos/run_release.sh`
 
 ---
 ## Limitations
