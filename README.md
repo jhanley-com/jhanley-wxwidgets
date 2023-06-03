@@ -22,6 +22,6 @@ This repository is a collection of software that I am writing for wxWidgets.
 Base wxWidgets project configured for vcpkg and cmake. Supports Windows, macOS and Ubuntu.
 
 ***
-### [wxWidgets-hello-world](wxWidgets-tree-list)
+### [wxWidgets-tree-list](wxWidgets-tree-list)
 
-Enhanced base wxWidgets project configured for vcpkg and cmake. Supports Windows, macOS and Ubuntu. Adds toolbars, status bar, splitters, tree and list controls.
+Enhanced base wxWidgets project configured for vcpkg and cmake. Supports Windows, macOS and Ubuntu. Adds toolbars, status bar, splitters, tree and list controls. Supports translation and future internationalization.
