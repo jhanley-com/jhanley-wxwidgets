@@ -13,7 +13,7 @@ The translated *.mo files are called Catalogs. Review the [wxLocale](https://doc
 // [absolute path]/Catalogs
 // For example, under Catalogs/ja_JP is is the Japanese translation file app.mo.
 // The catalog files are included in the application installer.
-// For exmaple on Windows:
+// For example on Windows:
 // - C:/Program Files/My App/
 // -- main.exe
 // -- Catalogs/

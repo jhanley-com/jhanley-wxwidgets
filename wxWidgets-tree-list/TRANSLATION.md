@@ -1,30 +1,31 @@
 # Translation
 
-This project is setup to support translating strings. This project does not implement translations. That will be done in another project example.
+This project is setup to support translating strings. This project does not implement internationalization (I18N). That will be done in another project example.
 
 ## Strings
 For strings that should not be translated, use wxNT(param). Example:
- - wxNT("Do not translate this message")
+ - `wxNT("Do not translate this message");`
 
-For strings that should be translated, use wxT(param). Example:
- - wxT("Translate this message") or _("Translate this message") 
+For strings that should be translated, use wxT(param). Examples:
+ - `wxT("Translate this message");`
+ - `_("Translate this message") ;`
 
 Unwrapped strings are supported. I prefer to use wxNT and wxT as this is easier to search for and shows intent during code reviews.
 
 ## Extract Strings from Source Code
 To extract the programs strings, use `xgettext`. I use the tools from [poedit](https://poedit.net/). Tested with version 3.3.1.
 
-Add the path to the Poedit tools to your path. On my Windows system, the binaries are located:
+Add the path to the Poedit tools to your path. On my Windows system, the binaries are located at:
  - c:\Program Files (x86)\Poedit
- - c:\Program Files (x86)\Poedit\GettextTools"\bin
+ - c:\Program Files (x86)\Poedit\GettextTools\bin
 
-Example poedit command. This extracts the strings from the src directory and writes to app.po:
+Example poedit command. This extracts the strings from the src directory and writes to `app.po`:
  - `xgettext -C --keyword=wxT --no-wrap -o app.po src\*.cpp`
 
 I have provided an example command in `tools/extract_strings`.
 
 ## Translate
-Send the file app.po to your translator. They should translate the strings in app.po and return a file with the language in the file name. Example: `app-ja_JP.po`.
+Send the file `app.po` to your translator. They should translate the strings in `app.po` and return a file with the language in the file name. Example: `app-ja_JP.po`.
 
 ## Compile Translation
 To compile app.po into app.mo:

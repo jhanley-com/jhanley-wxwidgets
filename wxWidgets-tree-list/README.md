@@ -13,7 +13,7 @@ MIT Licensed. Refer to [copyright.txt](copyright.txt) and [LICENSE](LICENSE) for
 ---
 ## Repository Description
 
-This is a enhanced base [wxWidgets](https://www.wxwidgets.org/) project setup for vcpkg and cmake. Windows, macOS and Ubuntu are supported.
+This is an enhanced base [wxWidgets](https://www.wxwidgets.org/) project setup for vcpkg and cmake. Windows, macOS and Ubuntu are supported.
 
 This version adds the following features to the base wxWindows project:
  - toolbar

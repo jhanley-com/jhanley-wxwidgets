@@ -27,6 +27,18 @@ wxIMPLEMENT_APP(MyApp);
 
 bool MyApp::OnInit()
 {
+
+#if defined(_DEBUG) && defined(_WIN32)
+	//control the allocation behavior of the debug heap manager
+int	tmp;
+
+	tmp = _CrtSetDbgFlag(_CRTDBG_REPORT_FLAG);
+	tmp |= _CRTDBG_ALLOC_MEM_DF;
+	tmp |= _CRTDBG_LEAK_CHECK_DF;
+
+	_CrtSetDbgFlag(tmp);
+#endif
+
 	SetVendorName(author);
 	SetAppName(appTitle);
 
@@ -37,7 +49,7 @@ bool MyApp::OnInit()
 	// [absolute path]/Catalogs
 	// For example, under Catalogs/ja_JP is is the Japanese translation file app.mo.
 	// The catalog files are included in the application installer.
-	// For exmaple on Windows:
+	// For example on Windows:
 	// - C:/Program Files/My App/
 	// -- main.exe
 	// -- Catalogs/
@@ -64,5 +76,12 @@ bool MyApp::OnInit()
 int
 MyApp::OnExit(void)
 {
+	if (m_locale != NULL)
+	{
+		// Fix a memory leak on program exit
+		delete m_locale;
+		m_locale = NULL;
+	}
+
 	return 0;
 }
