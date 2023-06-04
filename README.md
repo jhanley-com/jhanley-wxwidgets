@@ -1,4 +1,6 @@
-# wxWidgets Repository
+![Screenshot](wxWidgetsLogo.png)
+
+# wxWidgets Projects Repository
 
 ## Initial Release Date
 May 30, 2023
