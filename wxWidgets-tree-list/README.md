@@ -13,7 +13,7 @@ MIT Licensed. Refer to [copyright.txt](copyright.txt) and [LICENSE](LICENSE) for
 ---
 ## Repository Description
 
-This is an enhanced base [wxWidgets](https://www.wxwidgets.org/) project setup for vcpkg and cmake. Windows, macOS and Ubuntu are supported.
+This is an enhanced base [wxWidgets](https://www.wxwidgets.org/) project setup for vcpkg and cmake. Windows, macOS, Ubuntu and Red Hat are supported.
 
 This version adds the following features to the base wxWindows project:
  - toolbar
@@ -33,6 +33,8 @@ Example installers are provided for Windows and Debian systems.
  - Windows
    - [Visual Studio 2019 Community](https://visualstudio.microsoft.com/vs/older-downloads/).
    - [Visual Studio 2022 Community](https://visualstudio.microsoft.com/vs/).
+ - Red Hat Enterprise 9.2
+   - gcc version 11.3.1
  - Ubuntu
    - gcc version 11.3.0
  - macOS
@@ -64,6 +66,11 @@ This repository supports multiplatform builds using Visual Studio Code.
    - wxWidgets version 3.2.2
    - cmake version 3.26.3
    - vcpkg version 2023-04-07
+ - Red Hat Enterprise 9.2 x64
+   - gcc version 11.3.1
+   - wxWidgets version 3.2.2
+   - cmake version 3.20.2
+   - vcpkg version 2023-06-08
  - Ubuntu 22.04 x64
    - gcc version 11.3.0
    - wxWidgets version 3.2.2
@@ -82,6 +89,9 @@ This repository supports multiplatform builds using Visual Studio Code.
  - VCPKG:
    - `vcpkg install --triplet x64-windows wxwidgets`
 
+---
+## Setup Red Hat Enterprise 9.2
+ - This OS requires building wxWidgets from source. Go to this [document](BUILD-REDHAT.md) for details.
 ---
 ## Setup Ubuntu 22.04
  - Edit CMakeLists.txt:

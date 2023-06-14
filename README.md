@@ -6,7 +6,7 @@
 May 30, 2023
 
 ## Last Updated
-May 30, 2023
+June 13, 2023
 
 ## License
 
@@ -26,4 +26,4 @@ Base wxWidgets project configured for vcpkg and cmake. Supports Windows, macOS a
 ***
 ### [wxWidgets-tree-list](wxWidgets-tree-list)
 
-Enhanced base wxWidgets project configured for vcpkg and cmake. Supports Windows, macOS and Ubuntu. Adds toolbars, status bar, splitters, tree and list controls. Supports translation and future internationalization.
+Enhanced base wxWidgets project configured for vcpkg and cmake. Supports Windows, macOS, Ubuntu and Red Hat. Adds toolbars, status bar, splitters, tree and list controls. Supports translation and future internationalization.
